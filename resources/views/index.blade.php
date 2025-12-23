@@ -22,3 +22,4 @@
         @endforeach
     </tbody>
 </table>
+<a href="{{ url('/tasks/create') }}">Create New Task</a>

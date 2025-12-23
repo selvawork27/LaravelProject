@@ -18,4 +18,5 @@ Route::post('/logout', [WebAuthController::class, 'logout'])
 
 Route::middleware('auth')->group(function () {
     Route::resource('tasks', TasksController::class);
+    Route::get('/create/task', [TasksController::class, 'store'])->name('store');
 });
