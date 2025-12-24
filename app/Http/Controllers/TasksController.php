@@ -12,7 +12,7 @@ class TasksController extends Controller
     public function index()
     {
        $tasks=\App\Models\tasks::all();
-       return view('index',compact('tasks'));
+       return view('tasks.index',compact('tasks'));
     }
 
     /**
@@ -20,7 +20,7 @@ class TasksController extends Controller
      */
     public function create()
     {
-        return view('create');
+        return view('tasks.create');
     }
     public function store(Request $request)
     {
@@ -32,7 +32,7 @@ class TasksController extends Controller
         ]);
         $task = \App\Models\tasks::create($validatedData);
         $tasks=\App\Models\tasks::all();
-        return view('index',compact('tasks'));
+        return view('tasks.index',compact('tasks'));
     }
     public function show(string $id)
     {

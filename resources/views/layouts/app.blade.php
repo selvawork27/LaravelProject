@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Task</title>
+    <title>Tasks System</title>
 </head>
 <body>
-    <h1>Welcome to the Task Application</h1>
-    <p>This is the welcome page.</p>
-    @auth
-        <a href="{{ url('/tasks/create') }}">Create New Task</a>
-    @endauth
+    <div>
+        @include('layouts.header')
+    </div>
+    @include('welcome')
 </body>
 </html>

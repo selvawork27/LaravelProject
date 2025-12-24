@@ -5,8 +5,9 @@ use App\Http\Controllers\Auth\WebAuthController;
 use App\Http\Controllers\TasksController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.app');
 });
+
 
 Route::get('/login', [WebAuthController::class, 'showLogin'])
     ->name('login');

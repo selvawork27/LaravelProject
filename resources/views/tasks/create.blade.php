@@ -1,13 +1,8 @@
-
-    <form method="POST" action="{{ url('/logout') }}">
-        @csrf
-        <button type="submit">Logout</button>
-    </form>
-
-    <h2>Create New Task</h2>
+@include('layouts.header')
+  
+<h2>Create New Task</h2>
 <form method="POST" action="{{ route('tasks.store') }}">
     @csrf
-
     <div>
         <label for="title">Task Title:</label>
         <input type="text" id="title" name="title" value="{{ old('title') }}" required>

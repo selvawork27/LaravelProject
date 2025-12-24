@@ -1,7 +1,4 @@
-<form method="POST" action="{{ url('/logout') }}">
-    @csrf
-    <button type="submit">Logout</button>
-</form>
+@include('layouts.header')
 <table>
     <thead>
         <tr>
